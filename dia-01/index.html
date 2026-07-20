@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monte seu Lanche | Lanche do Código</title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+  <header class="topo">
+    <p class="marca">Lanche do Código</p>
+    <h1>Monte seu Lanche</h1>
+    <p class="subtitulo">Escolha o tamanho, capriche nos adicionais e veja seu pedido ganhar forma.</p>
+  </header>
+
+  <main class="conteudo">
+    <section class="cartao" aria-labelledby="titulo-tamanho">
+      <h2 id="titulo-tamanho">1. Escolha o tamanho</h2>
+      <p class="ajuda">Todo lanche começa com um X-Burguer por R$ 18,00.</p>
+
+      <label class="opcao">
+        <input id="tamanhoSimples" type="radio" name="tamanho" value="0" checked>
+        <span class="nome-opcao">Simples</span>
+        <span class="preco-opcao">+ R$ 0</span>
+      </label>
+
+      <label class="opcao">
+        <input id="tamanhoDuplo" type="radio" name="tamanho" value="6">
+        <span class="nome-opcao">Duplo</span>
+        <span class="preco-opcao">+ R$ 6</span>
+      </label>
+
+      <label class="opcao">
+        <input id="tamanhoTriplo" type="radio" name="tamanho" value="12">
+        <span class="nome-opcao">Triplo</span>
+        <span class="preco-opcao">+ R$ 12</span>
+      </label>
+    </section>
+
+    <section class="cartao" aria-labelledby="titulo-adicionais">
+      <h2 id="titulo-adicionais">2. Turbine seu lanche</h2>
+      <p class="ajuda">Marque quantos adicionais quiser.</p>
+
+      <label class="opcao">
+        <input id="checkBacon" type="checkbox" value="3">
+        <span class="nome-opcao">Bacon</span>
+        <span class="preco-opcao">+ R$ 3</span>
+      </label>
+
+      <label class="opcao">
+        <input id="checkQueijo" type="checkbox" value="2">
+        <span class="nome-opcao">Queijo extra</span>
+        <span class="preco-opcao">+ R$ 2</span>
+      </label>
+
+      <label class="opcao">
+        <input id="checkOvo" type="checkbox" value="2">
+        <span class="nome-opcao">Ovo</span>
+        <span class="preco-opcao">+ R$ 2</span>
+      </label>
+
+      <label class="opcao">
+        <input id="checkMolho" type="checkbox" value="1">
+        <span class="nome-opcao">Molho especial</span>
+        <span class="preco-opcao">+ R$ 1</span>
+      </label>
+
+      <label class="opcao">
+        <input id="checkCebola" type="checkbox" value="2">
+        <span class="nome-opcao">Cebola caramelizada</span>
+        <span class="preco-opcao">+ R$ 2</span>
+      </label>
+    </section>
+
+    <section class="cartao resumo" aria-labelledby="titulo-resumo">
+      <div class="linha-total">
+        <div>
+          <p class="rotulo-total">Total do pedido</p>
+          <p id="precoTotal" class="total" aria-live="polite">R$ 18,00</p>
+        </div>
+        <span aria-hidden="true">🍔</span>
+      </div>
+
+      <p id="escolhaAtual" class="escolha-atual" aria-live="polite">Tamanho: Simples</p>
+      <button id="botaoFinalizar" class="botao-principal" type="button">Finalizar Pedido</button>
+
+      <div class="ultimo-pedido">
+        <h2 id="titulo-resumo">Seu último pedido</h2>
+        <p id="ultimoPedido">Nenhum pedido finalizado ainda.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">Feito com HTML, CSS e JavaScript puro.</footer>
+  <script src="script.js"></script>
+</body>
+</html>

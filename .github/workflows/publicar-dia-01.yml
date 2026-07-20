@@ -1,0 +1,38 @@
+name: Publicar Dia 1 no GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  publicar:
+    environment:
+      name: github-pages
+      url: ${{ steps.publicacao.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar os arquivos do repositório
+        uses: actions/checkout@v4
+
+      - name: Preparar o GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Enviar os arquivos do Dia 1
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dia-01
+
+      - name: Publicar o site
+        id: publicacao
+        uses: actions/deploy-pages@v4

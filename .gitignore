@@ -1,0 +1,10 @@
+# Etapas futuras preservadas localmente, mas fora do repositório do Dia 1.
+dia-02/
+dia-03/
+dia-04/
+solucao-referencia/
+
+# Arquivos comuns do sistema e do editor.
+.DS_Store
+Thumbs.db
+.vscode/
