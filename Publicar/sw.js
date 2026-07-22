@@ -1,4 +1,4 @@
-// Modelo inicial do service worker.
+// Modelo inicial do service worker para copiar e completar.
 // Complete cada TODO durante a atividade.
 
 const NOME_DO_CACHE = 'lanche-do-codigo-v1';

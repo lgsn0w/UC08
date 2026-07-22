@@ -33,7 +33,16 @@ Cada item tem uma responsabilidade:
 | `sw.js` | Controla o cache e permite abrir o aplicativo sem conexão |
 | `icons/` | Guarda os ícones usados na instalação |
 
-Os arquivos `manifest.webmanifest` e `sw.js` já foram criados como modelos. Eles ainda precisam ser estudados e completados durante a aula.
+Os arquivos `manifest.webmanifest` e `sw.js` estão na pasta `Publicar` como modelos. Eles ainda precisam ser estudados, completados e copiados para `dia-01` durante a aula.
+
+Antes de começar, copie os dois modelos:
+
+```text
+Publicar/manifest.webmanifest  ->  dia-01/manifest.webmanifest
+Publicar/sw.js                 ->  dia-01/sw.js
+```
+
+Não altere somente os arquivos dentro de `Publicar`. O workflow do GitHub Pages publica o conteúdo de `dia-01`, portanto as versões prontas precisam estar nessa pasta.
 
 ## 1. Preparar os ícones
 
@@ -64,7 +73,7 @@ Use nomes de arquivo simples, sem espaços e sem acentos. Confira se a extensão
 
 ## 2. Completar o manifesto
 
-Abra `manifest.webmanifest`.
+Copie `Publicar/manifest.webmanifest` para `dia-01/manifest.webmanifest` e abra a cópia.
 
 O manifesto descreve como o site aparecerá depois de instalado. Os campos principais são:
 
@@ -141,7 +150,7 @@ Os caminhos começam com `./` porque todos esses arquivos estão dentro da mesma
 
 ## 4. Completar o service worker
 
-Abra `sw.js`.
+Copie `Publicar/sw.js` para `dia-01/sw.js` e abra a cópia.
 
 Um service worker executa separadamente da página. Ele pode guardar arquivos no cache e responder a solicitações mesmo quando não existe conexão com a internet.
 
